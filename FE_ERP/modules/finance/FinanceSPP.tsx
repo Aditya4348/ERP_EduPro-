@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
-import { useLocalStorage } from '../hooks/useLocalStorage';
-import { Card, Table, Button, Modal } from '../components/UI';
-import { HelpGuide } from '../components/HelpGuide';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
+import { Card, Table, Button, Modal } from '../../components/UI';
+import { HelpGuide } from '../../components/HelpGuide';
 
 interface Transaction {
   id: string;
@@ -123,8 +123,6 @@ export const FinanceSPP: React.FC = () => {
           </div>
         </form>
       </Modal>
-
-      <HelpGuide guideId="finance-spp" />
     </div>
   );
 };

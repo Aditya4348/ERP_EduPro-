@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { Card, Button, Modal } from '../components/UI';
-import { HelpGuide } from '../components/HelpGuide';
+import { Card, Button, Modal } from '@/components/UI';
+import { HelpGuide } from '@/components/HelpGuide';
 
 interface Material {
   id: string;

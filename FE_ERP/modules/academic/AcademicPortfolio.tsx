@@ -1,10 +1,10 @@
 
 import React, { useState, useMemo } from 'react';
-import { useAuth } from '../context/AuthContext';
-import { useLocalStorage } from '../hooks/useLocalStorage';
-import { Card, Button, Modal, Table } from '../components/UI';
-import { Breadcrumbs } from '../components/Breadcrumbs';
-import { StudentProject, UserRole, ProjectAsset } from '../types';
+import { useAuth } from '@/context/AuthContext';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
+import { Card, Button, Modal, Table } from '@/components/UI';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { StudentProject, UserRole, ProjectAsset } from '@/types';
 import { 
   Award, Star, ExternalLink, Image as ImageIcon, 
   Briefcase, TrendingUp, Github, Youtube, 

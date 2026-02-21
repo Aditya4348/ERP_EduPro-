@@ -14,13 +14,13 @@ import { VerifyOTP } from './modules/auth/VerifyOTP';
 
 // ================= DASHBOARD MODULES =================
 import { Dashboard } from './modules/Dashboard';
-import { FinanceSPP } from './modules/FinanceSPP';
+import { FinanceSPP } from './modules/finance/FinanceSPP';
 
 // Core Management
-import { MasterStudents } from './modules/MasterStudents';
-import { MasterTeachers } from './modules/MasterTeachers';
-import { MasterStaff } from './modules/MasterStaff';
-import { ClassManagement } from './modules/ClassManagement';
+import { MasterStudents } from './modules/core/MasterStudents';
+import { MasterTeachers } from './modules/core/MasterTeachers';
+import { MasterStaff } from './modules/core/MasterStaff';
+import { ClassManagement } from './modules/core/ClassManagement';
 import { SchoolProfile } from './modules/core/SchoolProfile';
 import { PromotionEngine } from './modules/core/PromotionEngine';
 import { MasterInsights } from './modules/core/MasterInsights';
@@ -31,17 +31,27 @@ import { TeacherDetail } from './modules/core/TeacherDetail';
 import { StaffDetail } from './modules/core/StaffDetail';
 import { ClassDetail } from './modules/core/ClassDetail';
 
+// Sub Menu
+import { SubMenuAcademic } from './modules/academic/SubMenuAcademic';
+import { SubMenuCore } from './modules/core/SubMenuCore';
+import { SubMenuStudentAffairs } from './modules/StudentAffairs/SubMenuStudentAffairs';
+import { SubMenuFinance } from './modules/finance/SubMenuFinance';
+import { SubMenuComms } from './modules/communications/SubMenuComms';
+import { SubMenuVocational } from './modules/vocational/SubMenuVocational';
+
+
+
 // Academic
-import { AcademicLMS } from './modules/AcademicLMS';
-import { AcademicGrades } from './modules/AcademicGrades';
-import { AcademicCBT } from './modules/AcademicCBT';
-import { AcademicAttendance } from './modules/AcademicAttendance';
-import { AcademicJournal } from './modules/AcademicJournal';
-import { AcademicCurriculum } from './modules/AcademicCurriculum';
-import { AcademicPortfolio } from './modules/AcademicPortfolio';
-import { AcademicCalendar } from './modules/AcademicCalendar';
-import { Announcements } from './modules/Announcements';
-import { Schedule } from './modules/Schedule';
+import { AcademicLMS } from './modules/academic/AcademicLMS';
+import { AcademicGrades } from './modules/academic/AcademicGrades';
+import { AcademicCBT } from './modules/academic/AcademicCBT';
+import { AcademicAttendance } from './modules/academic/AcademicAttendance';
+import { AcademicJournal } from './modules/academic/AcademicJournal';
+import { AcademicCurriculum } from './modules/academic/AcademicCurriculum';
+import { AcademicPortfolio } from './modules/academic/AcademicPortfolio';
+import { AcademicCalendar } from './modules/academic/AcademicCalendar';
+import { Announcements } from './modules/communications/Announcements';
+import { Schedule } from './modules/academic/Schedule';
 import { Inventory } from './modules/Inventory';
 import { HelpCenter } from './modules/HelpCenter';
 
@@ -52,7 +62,6 @@ import { OSISSections } from './modules/StudentAffairs/OSISSections';
 import { OSISProgramDetail } from './modules/StudentAffairs/OSISProgramDetail';
 import { Extracurricular } from './modules/StudentAffairs/Extracurricular';
 import { ExtracurricularDetail } from './modules/StudentAffairs/ExtracurricularDetail';
-import { SubMenu } from './modules/core/SubMenuCore';
 import { DashboardLayout } from './layouts/DashboardLayout';
 
 
@@ -96,7 +105,7 @@ const DashboardRoutes = () => {
         <Route path="/" element={<Dashboard />} />
 
         {/* Core */}
-        <Route path="/core" element={<SubMenu />} />
+        <Route path="/core" element={<SubMenuCore />} />
         <Route path="/core/insights" element={hasAccess([UserRole.SUPER_ADMIN, UserRole.KEPALA_SEKOLAH, UserRole.YAYASAN]) ? <MasterInsights /> : <ForbiddenAccess />} />
         <Route path="/core/profile" element={hasAccess([UserRole.SUPER_ADMIN, UserRole.KEPALA_SEKOLAH]) ? <SchoolProfile /> : <ForbiddenAccess />} />
         <Route path="/core/students" element={hasAccess([UserRole.SUPER_ADMIN, UserRole.TATA_USAHA, UserRole.WAKASEK, UserRole.BK, UserRole.KEPALA_SEKOLAH]) ? <MasterStudents /> : <ForbiddenAccess />} />
@@ -110,6 +119,7 @@ const DashboardRoutes = () => {
         <Route path="/core/promotion" element={hasAccess([UserRole.SUPER_ADMIN, UserRole.TATA_USAHA]) ? <PromotionEngine /> : <ForbiddenAccess />} />
 
         {/* Academic */}
+        <Route path="/academic" element={<SubMenuAcademic />} />
         <Route path="/academic/attendance" element={hasAccess([UserRole.GURU, UserRole.SUPER_ADMIN, UserRole.WAKASEK]) ? <AcademicAttendance /> : <ForbiddenAccess />} />
         <Route path="/academic/journal" element={hasAccess([UserRole.GURU, UserRole.SUPER_ADMIN, UserRole.KEPALA_SEKOLAH]) ? <AcademicJournal /> : <ForbiddenAccess />} />
         <Route path="/academic/schedule" element={<Schedule />} />
@@ -121,6 +131,7 @@ const DashboardRoutes = () => {
         <Route path="/academic/calendar" element={<AcademicCalendar />} />
 
         {/* Student Affairs */}
+        <Route path="/student-affairs" element={<SubMenuStudentAffairs />} />
         <Route path="/student-affairs/counseling" element={hasAccess([UserRole.BK, UserRole.WAKASEK, UserRole.SUPER_ADMIN, UserRole.KEPALA_SEKOLAH]) ? <Counseling /> : <ForbiddenAccess />} />
         <Route path="/student-affairs/osis" element={<OSIS />} />
         <Route path="/student-affairs/osis/sections" element={<OSISSections />} />
@@ -129,10 +140,15 @@ const DashboardRoutes = () => {
         <Route path="/student-affairs/extracurricular/:id" element={<ExtracurricularDetail />} />
 
         {/* Finance */}
+        <Route path="/finance" element={<SubMenuFinance />} />
         <Route path="/finance/spp" element={<FinanceSPP />} />
+
+        {/* Vocational */}
+        <Route path="/vocational" element={<SubMenuVocational />} />
 
         {/* Others */}
         <Route path="/assets/inventory" element={hasAccess([UserRole.SUPER_ADMIN, UserRole.TATA_USAHA]) ? <Inventory /> : <ForbiddenAccess />} />
+        <Route path="/comms" element={<SubMenuComms />} />
         <Route path="/comms/announcements" element={<Announcements />} />
         <Route path="/help-center" element={<HelpCenter />} />
 

@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
-import { Card, Table, Button } from '../components/UI';
-import { Breadcrumbs } from '../components/Breadcrumbs';
-import { INITIAL_STUDENTS } from '../constants';
+import { Card, Table, Button } from '@/components/UI';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { INITIAL_STUDENTS } from '@/constants';
 import { UserCheck, Calendar, Search, CheckCircle2, XCircle, Clock, AlertCircle } from 'lucide-react';
 
 export const AcademicAttendance: React.FC = () => {

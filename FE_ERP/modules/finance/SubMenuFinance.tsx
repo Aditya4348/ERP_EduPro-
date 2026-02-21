@@ -1,19 +1,11 @@
+// d:\ADITYA\KERJA\CODE\Pribadi\ERP_EduPro-\FE_ERP\modules\finance\SubMenuFinance.tsx
+
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  Users,
-  GraduationCap,
-  BookOpen,
-  Calendar,
   CreditCard,
-  ClipboardList,
-  Megaphone,
-  Package,
-  BarChart3,
-  Building2,
-  UserCog,
-  School,
-  TrendingUp,
+  Book,
+  Banknote,
 } from "lucide-react";
 
 interface MenuItem {
@@ -23,50 +15,26 @@ interface MenuItem {
   color: string;
 }
 
-export const SubMenuCore: React.FC = () => {
+export const SubMenuFinance: React.FC = () => {
   const navigate = useNavigate();
 
   const menuItems: MenuItem[] = [
     {
-      title: "Insights",
-      icon: <BarChart3 size={26} />,
-      path: "/core/insights",
+      title: "Tagihan SPP",
+      icon: <CreditCard size={26} />,
+      path: "/finance/spp",
       color: "bg-indigo-500",
     },
     {
-      title: "School Profile",
-      icon: <Building2 size={26} />,
-      path: "/core/profile",
-      color: "bg-slate-500",
-    },
-    {
-      title: "Students",
-      icon: <Users size={26} />,
-      path: "/core/students",
-      color: "bg-blue-500",
-    },
-    {
-      title: "Teachers",
-      icon: <GraduationCap size={26} />,
-      path: "/core/teachers",
+      title: "Buku Kas & Jurnal",
+      icon: <Book size={26} />,
+      path: "/finance/accounting",
       color: "bg-emerald-500",
     },
     {
-      title: "Staff",
-      icon: <UserCog size={26} />,
-      path: "/core/staff",
-      color: "bg-purple-500",
-    },
-    {
-      title: "Classes",
-      icon: <School size={26} />,
-      path: "/core/classes",
-      color: "bg-orange-500",
-    },
-    {
-      title: "Promotion",
-      icon: <TrendingUp size={26} />,
-      path: "/core/promotion",
+      title: "Payroll / Gaji",
+      icon: <Banknote size={26} />,
+      path: "/finance/payroll",
       color: "bg-rose-500",
     },
   ];

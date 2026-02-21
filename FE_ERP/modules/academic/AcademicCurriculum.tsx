@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { Card, Table, Button } from '../components/UI';
-import { Breadcrumbs } from '../components/Breadcrumbs';
+import { Card, Table, Button } from '@/components/UI';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { BookMarked, Layers, Award, ShieldCheck, ChevronRight, Plus } from 'lucide-react';
 
 export const AcademicCurriculum: React.FC = () => {

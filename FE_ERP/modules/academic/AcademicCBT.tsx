@@ -1,9 +1,9 @@
 
 import React, { useState, useMemo } from 'react';
-import { useLocalStorage } from '../hooks/useLocalStorage';
-import { Card, Table, Button, Modal } from '../components/UI';
-import { Breadcrumbs } from '../components/Breadcrumbs';
-import { HelpGuide } from '../components/HelpGuide';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
+import { Card, Table, Button, Modal } from '@/components/UI';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { HelpGuide } from '@/components/HelpGuide';
 import { 
   ClipboardList, Plus, Search, BookOpen, 
   Clock, Users, Trash2, Edit3, CheckCircle2, 

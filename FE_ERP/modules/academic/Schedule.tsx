@@ -1,10 +1,10 @@
 
 import React, { useState, useMemo } from 'react';
-import { useLocalStorage } from '../hooks/useLocalStorage';
-import { Card, Button, Modal } from '../components/UI';
-import { Breadcrumbs } from '../components/Breadcrumbs';
-import { HelpGuide } from '../components/HelpGuide';
-import { INITIAL_CLASSES } from '../constants';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
+import { Card, Button, Modal } from '../../components/UI';
+import { Breadcrumbs } from '../../components/Breadcrumbs';
+import { HelpGuide } from '../../components/HelpGuide';
+import { INITIAL_CLASSES } from '../../constants';
 import { 
   Printer, Download, Clock, BookOpen, 
   MapPin, Edit3, Save, X, Plus, Calendar as CalendarIcon,

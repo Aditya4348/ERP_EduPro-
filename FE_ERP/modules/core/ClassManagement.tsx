@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLocalStorage } from '../hooks/useLocalStorage';
-import { Card, Button, Modal } from '../components/UI';
-import { Breadcrumbs } from '../components/Breadcrumbs';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
+import { Card, Button, Modal } from '../../components/UI';
+import { Breadcrumbs } from '../../components/Breadcrumbs';
 import { DoorOpen, Plus, Search, Trash2, Edit2, Users, Eye } from 'lucide-react';
 
 interface SchoolClass {

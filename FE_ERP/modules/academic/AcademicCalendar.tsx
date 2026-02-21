@@ -1,16 +1,16 @@
 
 import React, { useState, useMemo } from 'react';
-import { useAuth } from '../context/AuthContext';
-import { useLocalStorage } from '../hooks/useLocalStorage';
-import { Card, Button, Modal } from '../components/UI';
-import { Breadcrumbs } from '../components/Breadcrumbs';
+import { useAuth } from '@/context/AuthContext';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
+import { Card, Button, Modal } from '@/components/UI';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { 
   Calendar as CalendarIcon, ChevronLeft, ChevronRight, 
   Bell, Clock, Download, Plus, Filter, 
   CheckCircle2, AlertCircle, Briefcase, Info,
   Search, Share2, Printer, MapPin, Tag, Layers
 } from 'lucide-react';
-import { CalendarEvent, EventCategory, UserRole } from '../types';
+import { CalendarEvent, EventCategory, UserRole } from '@/types';
 
 const INITIAL_EVENTS: CalendarEvent[] = [
   { 

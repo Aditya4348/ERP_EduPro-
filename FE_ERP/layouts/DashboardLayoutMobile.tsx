@@ -33,9 +33,11 @@ export const DashboardLayoutMobile: React.FC = () => {
   }, []);
 
   const filteredMenu = MENU_ITEMS.filter(item => user && item.roles.includes(user.role));
+  console.log("filteredMenu", filteredMenu);
+
   
   // Ambil menu utama untuk bottom navigation (max 5 item)
-  const mainMenuItems = filteredMenu.slice(0, 5);
+  const mainMenuItems = filteredMenu;
   
   // Sisa menu untuk "More" section
   const moreMenuItems = filteredMenu.slice(5);
@@ -267,11 +269,11 @@ export const DashboardLayoutMobile: React.FC = () => {
                 })}
                 
                 {/* Notifikasi di bottom nav untuk mobile */}
-                <button className="flex flex-col items-center py-2 px-3 text-slate-400 dark:text-slate-500 relative">
+                {/* <button className="flex flex-col items-center py-2 px-3 text-slate-400 dark:text-slate-500 relative">
                   <Bell size={20} />
                   <span className="text-[10px] font-medium mt-1">Notif</span>
                   <span className="absolute top-1 right-2 w-2 h-2 bg-rose-500 rounded-full border-2 border-white dark:border-slate-900"></span>
-                </button>
+                </button> */}
               </div>
             </nav>
 

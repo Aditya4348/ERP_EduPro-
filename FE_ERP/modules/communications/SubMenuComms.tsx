@@ -1,19 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  Users,
-  GraduationCap,
-  BookOpen,
-  Calendar,
-  CreditCard,
-  ClipboardList,
-  Megaphone,
-  Package,
-  BarChart3,
-  Building2,
-  UserCog,
-  School,
-  TrendingUp,
+  Bell,
+  Newspaper,
 } from "lucide-react";
 
 interface MenuItem {
@@ -23,51 +12,21 @@ interface MenuItem {
   color: string;
 }
 
-export const SubMenuCore: React.FC = () => {
+export const SubMenuComms: React.FC = () => {
   const navigate = useNavigate();
 
   const menuItems: MenuItem[] = [
     {
-      title: "Insights",
-      icon: <BarChart3 size={26} />,
-      path: "/core/insights",
-      color: "bg-indigo-500",
-    },
-    {
-      title: "School Profile",
-      icon: <Building2 size={26} />,
-      path: "/core/profile",
-      color: "bg-slate-500",
-    },
-    {
-      title: "Students",
-      icon: <Users size={26} />,
-      path: "/core/students",
-      color: "bg-blue-500",
-    },
-    {
-      title: "Teachers",
-      icon: <GraduationCap size={26} />,
-      path: "/core/teachers",
-      color: "bg-emerald-500",
-    },
-    {
-      title: "Staff",
-      icon: <UserCog size={26} />,
-      path: "/core/staff",
-      color: "bg-purple-500",
-    },
-    {
-      title: "Classes",
-      icon: <School size={26} />,
-      path: "/core/classes",
+      title: "Pengumuman",
+      icon: <Bell size={26} />,
+      path: "/comms/announcements",
       color: "bg-orange-500",
     },
     {
-      title: "Promotion",
-      icon: <TrendingUp size={26} />,
-      path: "/core/promotion",
-      color: "bg-rose-500",
+      title: "Portal Berita",
+      icon: <Newspaper size={26} />,
+      path: "/comms/news",
+      color: "bg-blue-500",
     },
   ];
 

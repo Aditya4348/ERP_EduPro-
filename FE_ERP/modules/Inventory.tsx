@@ -32,6 +32,7 @@ export const Inventory: React.FC = () => {
           ))}
         </Table>
       </Card>
+      
       <HelpGuide guideId="assets-inventory" />
     </div>
   );

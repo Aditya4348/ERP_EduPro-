@@ -105,8 +105,6 @@ export const Dashboard: React.FC = () => {
           </div>
         </Card>
       </div>
-
-      <HelpGuide guideId="dashboard" />
     </div>
   );
 };

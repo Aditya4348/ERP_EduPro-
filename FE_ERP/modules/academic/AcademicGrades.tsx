@@ -1,10 +1,10 @@
 
 import React, { useState, useMemo, useRef, useEffect } from 'react';
-import { useLocalStorage } from '../hooks/useLocalStorage';
-import { Card, Table, Button, Modal } from '../components/UI';
-import { HelpGuide } from '../components/HelpGuide';
-import { Breadcrumbs } from '../components/Breadcrumbs';
-import { INITIAL_CLASSES } from '../constants';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
+import { Card, Table, Button, Modal } from '@/components/UI';
+import { HelpGuide } from '@/components/HelpGuide';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { INITIAL_CLASSES } from '@/constants';
 // Added Edit3 to the imports
 import { 
   FileSpreadsheet, Save, Download, FileUp, 

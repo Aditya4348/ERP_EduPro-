@@ -1,11 +1,11 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLocalStorage } from '../hooks/useLocalStorage';
-import { Card, Table, Button, Modal } from '../components/UI';
-import { HelpGuide } from '../components/HelpGuide';
-import { Breadcrumbs } from '../components/Breadcrumbs';
-import { INITIAL_STAFF } from '../constants';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
+import { Card, Table, Button, Modal } from '../../components/UI';
+import { HelpGuide } from '../../components/HelpGuide';
+import { Breadcrumbs } from '../../components/Breadcrumbs';
+import { INITIAL_STAFF } from '../../constants';
 import { Search, Plus, Trash2, Contact, Eye } from 'lucide-react';
 
 interface Staff {

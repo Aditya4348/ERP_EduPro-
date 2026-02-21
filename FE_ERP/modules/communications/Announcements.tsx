@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { useLocalStorage } from '../hooks/useLocalStorage';
-import { Card, Button, Modal } from '../components/UI';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
+import { Card, Button, Modal } from '../../components/UI';
 import { Bell, Plus, Megaphone, Calendar, Users, Target, Trash2 } from 'lucide-react';
 
 interface Announcement {
